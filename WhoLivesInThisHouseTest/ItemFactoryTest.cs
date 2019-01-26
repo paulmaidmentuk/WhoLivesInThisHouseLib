@@ -11,7 +11,8 @@ namespace WhoLivesInThisHouseTest
         [Test()]
         public void it_should_create_an_item_with_tags()
         {
-            TagFactory tagFactory = new TagFactory();
+            RandomNumberGenerator randomNumberGenerator = new SystemRandomNumberGenerator();
+            TagFactory tagFactory = new TagFactory(randomNumberGenerator);
             ItemFactory itemFactory = new ItemFactory(tagFactory);
             Item item = itemFactory.CreateItem("Test Item", new List<string>(new String [] { "tag1", "tag2", "tag1"}));
             Assert.AreEqual("Test Item", item.GetName());
@@ -24,7 +25,8 @@ namespace WhoLivesInThisHouseTest
 
         public void it_should_support_fetch_by_tag()
         {
-            TagFactory tagFactory = new TagFactory();
+            RandomNumberGenerator randomNumberGenerator = new SystemRandomNumberGenerator();
+            TagFactory tagFactory = new TagFactory(randomNumberGenerator);
             ItemFactory itemFactory = new ItemFactory(tagFactory);
             itemFactory.CreateItem("Test Item", new List<string>(new String[] { "tag1", "tag2", "tag1" }));
             itemFactory.CreateItem("Test Item 2", new List<string>(new String[] { "tag1", "tag4", "tag5" }));

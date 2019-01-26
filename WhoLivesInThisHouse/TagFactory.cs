@@ -5,7 +5,13 @@ namespace WhoLivesInThisHouse
 {
     public class TagFactory
     {
+        private RandomNumberGenerator randomNumberGenerator;
         private List<Tag> tags = new List<Tag>();
+
+        public TagFactory(RandomNumberGenerator randomNumberGenerator)
+        {
+            this.randomNumberGenerator = randomNumberGenerator;
+        }
 
         public Tag GetTagByName(String name)
         {
@@ -30,12 +36,11 @@ namespace WhoLivesInThisHouse
         public List<Tag> GetRandomTags(int maxTags, List<Tag> excludeTags)
         {
             List<Tag> result = new List<Tag>();
-            Random randomNumberGenerator = new Random();
             if (maxTags > 0 && tags.Count > 0)
             {
                 do
                 {
-                    int tagIndex = randomNumberGenerator.Next(0, tags.Count);
+                    int tagIndex = randomNumberGenerator.GetRandomInteger(0, tags.Count);
                     Tag tag = tags[tagIndex];
                     if (!result.Contains(tag) && !excludeTags.Contains(tag))
                     {

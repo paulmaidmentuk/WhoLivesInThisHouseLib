@@ -41,6 +41,12 @@
     <Compile Include="JsonItemListFactory.cs" />
     <Compile Include="JsonItem.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="CharacterFactory.cs" />
+    <Compile Include="SystemRandomNumberGenerator.cs" />
+    <Compile Include="RandomNumberGenerator.cs" />
+    <Compile Include="CharacterNameGenerator.cs" />
+    <Compile Include="RoomFactory.cs" />
+    <Compile Include="Room.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

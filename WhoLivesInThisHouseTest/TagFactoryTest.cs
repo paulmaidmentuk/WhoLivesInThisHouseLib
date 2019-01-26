@@ -11,7 +11,8 @@ namespace WhoLivesInThisHouseTest
         [Test()]
         public void it_should_create_a_tag_by_name()
         {
-            TagFactory tagFactory = new TagFactory();
+            RandomNumberGenerator randomNumberGenerator = new SystemRandomNumberGenerator();
+            TagFactory tagFactory = new TagFactory(randomNumberGenerator);
             Tag tag = tagFactory.GetTagByName("Test Tag");
             Assert.AreEqual(new Tag("Test Tag"), tag);
         }
@@ -19,7 +20,8 @@ namespace WhoLivesInThisHouseTest
         [Test()]
         public void it_should_maintain_a_unique_list_of_created_tags()
         {
-            TagFactory tagFactory = new TagFactory();
+            RandomNumberGenerator randomNumberGenerator = new SystemRandomNumberGenerator();
+            TagFactory tagFactory = new TagFactory(randomNumberGenerator);
             tagFactory.GetTagByName("Test Tag");
             tagFactory.GetTagByName("Test Tag 2");
             tagFactory.GetTagByName("Test Tag");
@@ -32,7 +34,8 @@ namespace WhoLivesInThisHouseTest
         [Test()]
         public void it_should_be_able_to_fetch_random_tags()
         {
-            TagFactory tagFactory = new TagFactory();
+            RandomNumberGenerator randomNumberGenerator = new SystemRandomNumberGenerator();
+            TagFactory tagFactory = new TagFactory(randomNumberGenerator);
             tagFactory.GetTagByName("Tag 1");
             tagFactory.GetTagByName("Tag 2");
             tagFactory.GetTagByName("Tag 3");
@@ -56,7 +59,8 @@ namespace WhoLivesInThisHouseTest
         [Test()]
         public void it_should_be_able_to_fetch_random_excluding_some()
         {
-            TagFactory tagFactory = new TagFactory();
+            RandomNumberGenerator randomNumberGenerator = new SystemRandomNumberGenerator();
+            TagFactory tagFactory = new TagFactory(randomNumberGenerator);
             tagFactory.GetTagByName("Tag 1");
             tagFactory.GetTagByName("Tag 2");
             tagFactory.GetTagByName("Tag 3");

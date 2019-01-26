@@ -26,7 +26,8 @@ namespace WhoLivesInThisHouseTest
               ]
             }]";
 
-            TagFactory tagFactory = new TagFactory();
+            RandomNumberGenerator randomNumberGenerator = new SystemRandomNumberGenerator();
+            TagFactory tagFactory = new TagFactory(randomNumberGenerator);
             ItemFactory itemFactory = new ItemFactory(tagFactory);
             JsonItemListFactory jsonItemListFactory = new JsonItemListFactory(itemFactory);
             List<Item> itemList = jsonItemListFactory.GetItems(json);

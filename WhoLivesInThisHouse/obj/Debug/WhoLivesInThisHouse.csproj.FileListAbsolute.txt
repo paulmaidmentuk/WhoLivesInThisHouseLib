@@ -1,10 +1,9 @@
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/bin/Debug/WhoLivesInThisHouse.dll
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/bin/Debug/WhoLivesInThisHouse.pdb
-/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/obj/Debug/WhoLivesInThisHouse.csproj.CoreCompileInputs.cache
-/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/obj/Debug/WhoLivesInThisHouse.dll
-/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/obj/Debug/WhoLivesInThisHouse.pdb
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/bin/Debug/Newtonsoft.Json.dll
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/bin/Debug/Newtonsoft.Json.pdb
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/bin/Debug/Newtonsoft.Json.xml
-/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/obj/Debug/WhoLivesInThisHouse.csprojAssemblyReference.cache
+/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/obj/Debug/WhoLivesInThisHouse.csproj.CoreCompileInputs.cache
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/obj/Debug/WhoLivesInThisHouse.csproj.CopyComplete
+/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/obj/Debug/WhoLivesInThisHouse.dll
+/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/obj/Debug/WhoLivesInThisHouse.pdb
