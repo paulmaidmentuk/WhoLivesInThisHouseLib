@@ -5,13 +5,17 @@
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/NSubstituteAutoMocker.dll
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/nunit.framework.dll
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/WhoLivesInThisHouse.dll
+/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/Unosquare.Labs.EmbedIO.dll
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/Newtonsoft.Json.dll
+/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/Unosquare.Swan.Lite.dll
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/WhoLivesInThisHouse.pdb
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/Castle.Core.xml
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/nunit.framework.pdb
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/nunit.framework.xml
+/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/Unosquare.Labs.EmbedIO.xml
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/Newtonsoft.Json.pdb
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/Newtonsoft.Json.xml
+/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/Unosquare.Swan.Lite.xml
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/obj/Debug/WhoLivesInThisHouseTest.csprojAssemblyReference.cache
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/obj/Debug/WhoLivesInThisHouseTest.csproj.CoreCompileInputs.cache
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/obj/Debug/WhoLivesInThisHouseTest.csproj.CopyComplete

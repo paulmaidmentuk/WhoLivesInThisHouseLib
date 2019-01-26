@@ -33,18 +33,31 @@ namespace WhoLivesInThisHouse
         /// </summary>
         /// <returns>The random tags.</returns>
         /// <param name="maxTags">Max tags to retrieve.</param>
-        public List<Tag> GetRandomTags(int maxTags, List<Tag> excludeTags)
+        public List<Tag> GetRandomTags(int maxTags, List<Tag> excludeTags, ItemFactory itemFactory, bool rejectIfSharedTag)
         {
             List<Tag> result = new List<Tag>();
             if (maxTags > 0 && tags.Count > 0)
             {
+                int retryCount = 0;
                 do
                 {
                     int tagIndex = randomNumberGenerator.GetRandomInteger(0, tags.Count);
                     Tag tag = tags[tagIndex];
                     if (!result.Contains(tag) && !excludeTags.Contains(tag))
                     {
-                        result.Add(tag);
+                        bool rejectTag = false;
+                        if (rejectIfSharedTag)
+                        {
+                            rejectTag = (itemFactory.FetchItemsByTagName(tag.Name).Count > 1);
+                        }
+                        if (!rejectTag) {
+                            result.Add(tag);
+                        }
+                    }
+                    retryCount++;
+                    if (retryCount > 5)
+                    {
+                        break;
                     }
                 } while ((result.Count < maxTags) && (result.Count < (tags.Count - excludeTags.Count)));
             }

@@ -1,22 +1,17 @@
 ﻿<Properties StartupConfiguration="{23C4FFCC-3149-4E40-BFE8-0B529888F543}|Unit Tests">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhoLivesInThisHouseTest/RoomFactoryTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhoLivesInThisHouse/Character.cs">
     <Files>
-      <File FileName="WhoLivesInThisHouse/CharacterFactory.cs" Line="115" Column="10" />
-      <File FileName="WhoLivesInThisHouse/RoomFactory.cs" Line="86" Column="47" />
-      <File FileName="WhoLivesInThisHouseTest/RoomFactoryTest.cs" Line="17" Column="51" />
-      <File FileName="WhoLivesInThisHouse/ItemFactory.cs" Line="6" Column="18" />
+      <File FileName="WhoLivesInThisHouse/GameServer.cs" Line="27" Column="69" />
+      <File FileName="WhoLivesInThisHouse/CharacterListController.cs" Line="36" Column="1" />
+      <File FileName="WhoLivesInThisHouse/GameContext.cs" Line="44" Column="43" />
+      <File FileName="WhoLivesInThisHouseTest/JsonItemListFactoryTest.cs" Line="27" Column="17" />
+      <File FileName="WhoLivesInThisHouse/Character.cs" Line="103" Column="6" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
           <Node name="WhoLivesInThisHouse" expanded="True">
-            <Node name="WhoLivesInThisHouseTest" expanded="True">
-              <Node name="WhoLivesInThisHouseTest" expanded="True">
-                <Node name="CharacterFactoryTest" expanded="True">
-                  <Node name="it_should_set_up_dislikes_and_likes_for_characters" selected="True" />
-                </Node>
-              </Node>
-            </Node>
+            <Node name="WhoLivesInThisHouseTest" selected="True" />
           </Node>
         </State>
       </Pad>

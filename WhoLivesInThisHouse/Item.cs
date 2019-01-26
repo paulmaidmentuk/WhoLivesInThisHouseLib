@@ -40,6 +40,18 @@ namespace WhoLivesInThisHouse
             return false;
         }
 
+        public bool HasTagIn(List<Tag> tagList)
+        {
+            foreach(Tag tag in tagList)
+            {
+                if(HasTag(tag.Name))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public List<Tag> GetTags()
         {
             return this.tags;
@@ -58,6 +70,16 @@ namespace WhoLivesInThisHouse
         public override int GetHashCode()
         {
             return GetName().GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            String result = "[Item] Name:" + GetName();
+            foreach(Tag tag in tags)
+            {
+                result += "\n" + tag;
+            }
+            return result;
         }
     }
 }

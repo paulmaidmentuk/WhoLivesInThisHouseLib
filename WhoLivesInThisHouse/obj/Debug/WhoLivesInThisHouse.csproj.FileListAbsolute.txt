@@ -1,8 +1,14 @@
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/bin/Debug/WhoLivesInThisHouse.dll
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/bin/Debug/WhoLivesInThisHouse.pdb
+/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/bin/Debug/log4net.dll
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/bin/Debug/Newtonsoft.Json.dll
+/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/bin/Debug/Unosquare.Labs.EmbedIO.dll
+/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/bin/Debug/Unosquare.Swan.Lite.dll
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/bin/Debug/Newtonsoft.Json.pdb
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/bin/Debug/Newtonsoft.Json.xml
+/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/bin/Debug/log4net.xml
+/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/bin/Debug/Unosquare.Swan.Lite.xml
+/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/bin/Debug/Unosquare.Labs.EmbedIO.xml
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/obj/Debug/WhoLivesInThisHouse.csproj.CoreCompileInputs.cache
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/obj/Debug/WhoLivesInThisHouse.csproj.CopyComplete
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/obj/Debug/WhoLivesInThisHouse.dll

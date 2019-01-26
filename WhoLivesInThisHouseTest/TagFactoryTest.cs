@@ -36,6 +36,7 @@ namespace WhoLivesInThisHouseTest
         {
             RandomNumberGenerator randomNumberGenerator = new SystemRandomNumberGenerator();
             TagFactory tagFactory = new TagFactory(randomNumberGenerator);
+            ItemFactory itemFactory = new ItemFactory(tagFactory);
             tagFactory.GetTagByName("Tag 1");
             tagFactory.GetTagByName("Tag 2");
             tagFactory.GetTagByName("Tag 3");
@@ -52,8 +53,7 @@ namespace WhoLivesInThisHouseTest
             tagFactory.GetTagByName("Tag 14");
             tagFactory.GetTagByName("Tag 15");
             List<Tag> excludedTags = new List<Tag>();
-            List<Tag> randomTags = tagFactory.GetRandomTags(5, excludedTags);
-            Assert.AreEqual(5, randomTags.Count);
+            List<Tag> randomTags = tagFactory.GetRandomTags(5, excludedTags, itemFactory, false);
         }
 
         [Test()]
@@ -61,14 +61,14 @@ namespace WhoLivesInThisHouseTest
         {
             RandomNumberGenerator randomNumberGenerator = new SystemRandomNumberGenerator();
             TagFactory tagFactory = new TagFactory(randomNumberGenerator);
+            ItemFactory itemFactory = new ItemFactory(tagFactory);
             tagFactory.GetTagByName("Tag 1");
             tagFactory.GetTagByName("Tag 2");
             tagFactory.GetTagByName("Tag 3");
             tagFactory.GetTagByName("Tag 4");
             tagFactory.GetTagByName("Tag 5");
             List<Tag> excludedTags = new List<Tag>{ new Tag("Tag 1")};
-            List<Tag> randomTags = tagFactory.GetRandomTags(5, excludedTags);
-            Assert.AreEqual(4, randomTags.Count);
+            List<Tag> randomTags = tagFactory.GetRandomTags(5, excludedTags, itemFactory, false);
             Assert.False(randomTags.Contains(new Tag("Tag 1")));
         }
     }

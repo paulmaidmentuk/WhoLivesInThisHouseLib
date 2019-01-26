@@ -36,8 +36,12 @@ namespace WhoLivesInThisHouse
                     characterName = characterNameGenerator.Generate();
                 } while (!CharacterNameIsUnique(characterName));
 
-                List<Tag> likes = tagFactory.GetRandomTags(5, new List<Tag> { });
-                List<Tag> dislikes = tagFactory.GetRandomTags(5, likes);
+                List<Tag> likes = tagFactory.GetRandomTags(5, new List<Tag> { }, itemFactory, false);
+
+                List<Tag> dislikes;
+                dislikes = tagFactory.GetRandomTags(5, likes, itemFactory, true);
+
+
 
                 Character character = new Character(
                     characterName,

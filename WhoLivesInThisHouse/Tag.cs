@@ -9,9 +9,13 @@ namespace WhoLivesInThisHouse
             this.name = name;
         }
 
-        public String GetName()
+        public String Name
         {
-            return this.name;
+            get
+            {
+                return this.name;
+            }
+
         }
 
         public override bool Equals(object obj)
@@ -21,12 +25,18 @@ namespace WhoLivesInThisHouse
                 return false;
             }
             Tag other = (Tag) obj;
-            return GetName().Equals(other.GetName());
+            return Name.Equals(other.Name);
         }
 
         public override int GetHashCode()
         {
-            return GetName().GetHashCode();
+            return Name.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            String result = "[Tag] Name:" + Name +" ";
+            return result;
         }
     }
 }

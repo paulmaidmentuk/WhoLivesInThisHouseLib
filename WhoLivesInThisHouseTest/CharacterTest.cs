@@ -20,11 +20,12 @@ namespace WhoLivesInThisHouseTest
             );
             Assert.AreEqual("Bob", character.Name);
             Assert.AreEqual(2, character.LikeTags.Count);
-            Assert.AreEqual("tag1", character.LikeTags[0].GetName());
-            Assert.AreEqual("tag2", character.LikeTags[1].GetName());
+            Assert.AreEqual("tag1", character.LikeTags[0].Name);
+            Assert.AreEqual("tag2", character.LikeTags[1].Name);
             Assert.AreEqual(2, character.DislikeTags.Count);
-            Assert.AreEqual("tag3", character.DislikeTags[0].GetName());
-            Assert.AreEqual("tag4", character.DislikeTags[1].GetName());
+            Assert.AreEqual("tag3", character.DislikeTags[0].Name);
+            Assert.AreEqual("tag4", character.DislikeTags[1].Name);
+            Console.WriteLine("Character:" + character);
         }
 
         [Test()]
@@ -39,11 +40,15 @@ namespace WhoLivesInThisHouseTest
                 dislikeTags
             );
 
+            Console.WriteLine("Character 1:" + character1);
+
             Character character2 = new Character(
                 "Bob",
                 likeTags,
                 dislikeTags
             );
+
+            Console.WriteLine("Character 2:" + character2);
 
             Assert.AreEqual(character1, character2);
 
@@ -54,6 +59,8 @@ namespace WhoLivesInThisHouseTest
                 dislikeTags
             );
 
+            Console.WriteLine("Character 3:" + character3);
+
             Assert.AreNotEqual(character2, character3);
 
             Character character4 = new Character(
@@ -61,6 +68,8 @@ namespace WhoLivesInThisHouseTest
                 likeTags,
                 moreTags
             );
+
+            Console.WriteLine("Character 4:" + character4);
 
             Assert.AreNotEqual(character2, character4);
         }

@@ -50,6 +50,8 @@
     <Compile Include="CharacterTest.cs" />
     <Compile Include="CharacterFactoryTest.cs" />
     <Compile Include="RoomFactoryTest.cs" />
+    <Compile Include="CharacterListSerializerTest.cs" />
+    <Compile Include="CharacterListDeserializerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -19,7 +19,7 @@ namespace WhoLivesInThisHouseTest
         public void it_should_be_possible_to_construct_a_tag()
         {
             Tag tag = new Tag("This is a tag");
-            Assert.AreEqual("This is a tag", tag.GetName());
+            Assert.AreEqual("This is a tag", tag.Name);
         }
     }
 }

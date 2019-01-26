@@ -32,18 +32,28 @@ namespace WhoLivesInThisHouse
         {
             foreach (Tag likeTag in character.LikeTags)
             {
-                List<Item> tagItems = itemFactory.FetchItemsByTagName(likeTag.GetName());
+                List<Item> tagItems = itemFactory.FetchItemsByTagName(likeTag.Name);
                 if (tagItems.Count == 0)
                 {
-                    throw new Exception("There must be items for the tag " + likeTag.GetName() + " please check config");
+                    throw new Exception("There must be items for the tag " + likeTag.Name + " please check config");
                 }
                 int randomItemIndex = randomNumberGenerator.GetRandomInteger(0, tagItems.Count);
                 Item selectedTagItem;
+                int loopRepeatCount = 0;
                 do
                 {
                     selectedTagItem = tagItems[randomItemIndex];
+                    loopRepeatCount++;
+                    if (loopRepeatCount > 10)
+                    {
+                        break;
+                    }
                 } while (items.Contains(selectedTagItem));
-                items.Add(selectedTagItem);
+
+                if (!selectedTagItem.HasTagIn(character.DislikeTags))
+                {
+                    items.Add(selectedTagItem);
+                }
             }
         }
 
@@ -69,19 +79,28 @@ namespace WhoLivesInThisHouse
 
             foreach (Tag fillerTag in tagsDislikedByOtherCharacters)
             {
-                List<Item> tagItems = itemFactory.FetchItemsByTagName(fillerTag.GetName());
+                List<Item> tagItems = itemFactory.FetchItemsByTagName(fillerTag.Name);
                 if (tagItems.Count == 0)
                 {
-                    throw new Exception("There must be items for the tag " + fillerTag.GetName() + " please check config");
+                    throw new Exception("There must be items for the tag " + fillerTag.Name + " please check config");
                 }
                 int randomItemIndex = randomNumberGenerator.GetRandomInteger(0, tagItems.Count);
                 Item selectedTagItem;
+                int loopRepeatCount = 0;
                 do
                 {
                     selectedTagItem = tagItems[randomItemIndex];
+                    loopRepeatCount++;
+                    if (loopRepeatCount > 10)
+                    {
+                        break;
+                    }
                 } while (items.Contains(selectedTagItem));
-                items.Add(selectedTagItem);
-                if (items.Count > 10)
+                if (!selectedTagItem.HasTagIn(character.DislikeTags))
+                {
+                    items.Add(selectedTagItem);
+                }
+                if (items.Count == 10)
                 {
                     //Stop after so many items
                     break;

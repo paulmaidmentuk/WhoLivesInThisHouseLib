@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Runtime.Serialization;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace WhoLivesInThisHouse
 {
+    [Serializable]
     public class Character
     {
         private String name;
@@ -77,6 +80,25 @@ namespace WhoLivesInThisHouse
             return this.Name.GetHashCode() 
                 + 31 * this.LikeTags.GetHashCode() 
                 + 31 * this.DislikeTags.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            String result = "[Character] Name:" + Name;
+
+            result += "\n Likes: ";
+            foreach (Tag tag in LikeTags)
+            {
+                result += tag;
+            }
+
+            result += "\n Dislikes: ";
+            foreach (Tag tag in DislikeTags)
+            {
+                result += tag;
+            }
+
+            return result;
         }
     }
 }

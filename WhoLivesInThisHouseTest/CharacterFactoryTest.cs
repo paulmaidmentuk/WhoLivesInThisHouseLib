@@ -26,7 +26,12 @@ namespace WhoLivesInThisHouseTest
             List<Character> characters = characterFactory.GenerateCharactersForGame(5);
             Assert.AreEqual(5, characters.Count);
             Assert.AreEqual(5, characters[0].LikeTags.Count);
-            Assert.AreEqual(5, characters[0].DislikeTags.Count);
+
+            Console.WriteLine("Characters:\n");
+            foreach(Character character in characters)
+            {
+                Console.WriteLine(character);
+            }
         }
     }
 }

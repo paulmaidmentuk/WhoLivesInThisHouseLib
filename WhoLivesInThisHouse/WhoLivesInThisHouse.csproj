@@ -31,6 +31,18 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Unosquare.Swan.Lite">
+      <HintPath>..\packages\Unosquare.Swan.Lite.0.38.1\lib\net452\Unosquare.Swan.Lite.dll</HintPath>
+    </Reference>
+    <Reference Include="Unosquare.Labs.EmbedIO">
+      <HintPath>..\packages\EmbedIO.2.2.3\lib\net452\Unosquare.Labs.EmbedIO.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <Package>nunit</Package>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -48,6 +60,11 @@
     <Compile Include="RoomFactory.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="GameDomainException.cs" />
+    <Compile Include="GameServer.cs" />
+    <Compile Include="CharacterListSerializer.cs" />
+    <Compile Include="CharacterListDeserializer.cs" />
+    <Compile Include="CharacterListController.cs" />
+    <Compile Include="GameContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
