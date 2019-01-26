@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhoLivesInThisHouseTest", "WhoLivesInThisHouseTest\WhoLivesInThisHouseTest.csproj", "{23C4FFCC-3149-4E40-BFE8-0B529888F543}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhoLivesInThisHouse", "WhoLivesInThisHouse\WhoLivesInThisHouse.csproj", "{1363AFAD-9733-48A2-BA85-3BAA699E01A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23C4FFCC-3149-4E40-BFE8-0B529888F543}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{23C4FFCC-3149-4E40-BFE8-0B529888F543}.Debug|x86.Build.0 = Debug|Any CPU
+		{23C4FFCC-3149-4E40-BFE8-0B529888F543}.Release|x86.ActiveCfg = Release|Any CPU
+		{23C4FFCC-3149-4E40-BFE8-0B529888F543}.Release|x86.Build.0 = Release|Any CPU
+		{1363AFAD-9733-48A2-BA85-3BAA699E01A2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1363AFAD-9733-48A2-BA85-3BAA699E01A2}.Debug|x86.Build.0 = Debug|Any CPU
+		{1363AFAD-9733-48A2-BA85-3BAA699E01A2}.Release|x86.ActiveCfg = Release|Any CPU
+		{1363AFAD-9733-48A2-BA85-3BAA699E01A2}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
