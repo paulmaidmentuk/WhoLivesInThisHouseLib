@@ -3,10 +3,6 @@ using System.Collections.Generic;
 
 namespace WhoLivesInThisHouse
 {
-    /*
-        No two characters must like or dislike the same things after generation
-    */
-
     public class CharacterFactory
     {
         private List<Character> characters;
@@ -69,6 +65,19 @@ namespace WhoLivesInThisHouse
             }
         }
 
+        public List<Character> GetAllCharactersExcludingOne(Character excluded)
+        {
+            List<Character> result = new List<Character>();
+            foreach (Character character in this.characters)
+            {
+                if (!character.Equals(excluded))
+                {
+                    result.Add(character);
+                }
+            }
+            return result;
+        }
+
         private bool CharacterNameIsUnique(String characterName)
         {
             foreach (Character character in characters)
@@ -85,7 +94,7 @@ namespace WhoLivesInThisHouse
         {
             foreach (Character character in characters)
             {
-                if (character.LikeTags.Equals(likes))
+                if (character.LikeTags.Equals(likes) || character.DislikeTags.Equals(likes))
                 {
                     return false;
                 }
@@ -97,7 +106,7 @@ namespace WhoLivesInThisHouse
         {
             foreach (Character character in characters)
             {
-                if (character.DislikeTags.Equals(dislikes))
+                if (character.LikeTags.Equals(dislikes) || character.DislikeTags.Equals(dislikes))
                 {
                     return false;
                 }

@@ -47,6 +47,7 @@
     <Compile Include="CharacterNameGenerator.cs" />
     <Compile Include="RoomFactory.cs" />
     <Compile Include="Room.cs" />
+    <Compile Include="GameDomainException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

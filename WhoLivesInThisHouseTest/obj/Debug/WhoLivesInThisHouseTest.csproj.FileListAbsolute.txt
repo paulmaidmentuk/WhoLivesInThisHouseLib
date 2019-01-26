@@ -2,6 +2,7 @@
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/WhoLivesInThisHouseTest.pdb
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/Castle.Core.dll
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/NSubstitute.dll
+/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/NSubstituteAutoMocker.dll
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/nunit.framework.dll
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/WhoLivesInThisHouse.dll
 /home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouseTest/bin/Debug/Newtonsoft.Json.dll

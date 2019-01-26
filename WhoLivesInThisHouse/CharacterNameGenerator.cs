@@ -4,8 +4,8 @@ namespace WhoLivesInThisHouse
     public class CharacterNameGenerator
     {
         private RandomNumberGenerator randomNumberGenerator;
-        private String[] fornames = { "attractive", "bald", "beautiful", "clean", "dazzling", "drab", "elegant", "fancy", "fit", "glamorous", "gorgeous", "handsome", "long", "magnificent", "muscular", "quaint", "scruffy", "shapely", "short", "skinny", "stocky", "unsightly" };
-        private String[] surnames = { "farmer", "butcher", "baker", "programmer", "artist", "musician", "rockstar", "dragon", "fox", "kitty", "hound", "paul", "rob", "marcus", "denney", "dinah"};
+        private String[] fornames = { "impossible", "sacred", "tall", "attractive", "bald", "beautiful", "clean", "dazzling", "drab", "elegant", "fancy", "fit", "glamorous", "gorgeous", "handsome", "long", "magnificent", "muscular", "quaint", "scruffy", "shapely", "short", "skinny", "stocky", "unsightly" };
+        private String[] surnames = { "farmer", "butcher", "baker", "programmer", "artist", "musician", "rockstar", "dragon", "fox", "kitty", "hound", "paul", "rob", "marcus", "denney", "dinah", "doctor", "nurse", "robot", "jammer"};
 
         public CharacterNameGenerator(RandomNumberGenerator randomNumberGenerator)
         {

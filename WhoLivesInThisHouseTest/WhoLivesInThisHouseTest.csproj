@@ -49,6 +49,7 @@
     <Compile Include="JsonItemListFactoryTest.cs" />
     <Compile Include="CharacterTest.cs" />
     <Compile Include="CharacterFactoryTest.cs" />
+    <Compile Include="RoomFactoryTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
