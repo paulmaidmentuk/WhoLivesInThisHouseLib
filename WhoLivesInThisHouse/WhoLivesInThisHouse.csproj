@@ -40,6 +40,7 @@
     <Compile Include="ItemFactory.cs" />
     <Compile Include="JsonItemListFactory.cs" />
     <Compile Include="JsonItem.cs" />
+    <Compile Include="Character.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -28,5 +28,44 @@ namespace WhoLivesInThisHouseTest
             Assert.AreEqual(new Tag("Test Tag"), tags[0]);
             Assert.AreEqual(new Tag("Test Tag 2"), tags[1]);
         }
+
+        [Test()]
+        public void it_should_be_able_to_fetch_random_tags()
+        {
+            TagFactory tagFactory = new TagFactory();
+            tagFactory.GetTagByName("Tag 1");
+            tagFactory.GetTagByName("Tag 2");
+            tagFactory.GetTagByName("Tag 3");
+            tagFactory.GetTagByName("Tag 4");
+            tagFactory.GetTagByName("Tag 5");
+            tagFactory.GetTagByName("Tag 6");
+            tagFactory.GetTagByName("Tag 7");
+            tagFactory.GetTagByName("Tag 8");
+            tagFactory.GetTagByName("Tag 9");
+            tagFactory.GetTagByName("Tag 10");
+            tagFactory.GetTagByName("Tag 11");
+            tagFactory.GetTagByName("Tag 12");
+            tagFactory.GetTagByName("Tag 13");
+            tagFactory.GetTagByName("Tag 14");
+            tagFactory.GetTagByName("Tag 15");
+            List<Tag> excludedTags = new List<Tag>();
+            List<Tag> randomTags = tagFactory.GetRandomTags(5, excludedTags);
+            Assert.AreEqual(5, randomTags.Count);
+        }
+
+        [Test()]
+        public void it_should_be_able_to_fetch_random_excluding_some()
+        {
+            TagFactory tagFactory = new TagFactory();
+            tagFactory.GetTagByName("Tag 1");
+            tagFactory.GetTagByName("Tag 2");
+            tagFactory.GetTagByName("Tag 3");
+            tagFactory.GetTagByName("Tag 4");
+            tagFactory.GetTagByName("Tag 5");
+            List<Tag> excludedTags = new List<Tag>{ new Tag("Tag 1")};
+            List<Tag> randomTags = tagFactory.GetRandomTags(5, excludedTags);
+            Assert.AreEqual(4, randomTags.Count);
+            Assert.False(randomTags.Contains(new Tag("Tag 1")));
+        }
     }
 }

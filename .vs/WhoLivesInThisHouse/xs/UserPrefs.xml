@@ -1,17 +1,30 @@
 ﻿<Properties StartupConfiguration="{23C4FFCC-3149-4E40-BFE8-0B529888F543}|Unit Tests">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhoLivesInThisHouseTest/TagFactoryTest.cs">
+    <Files>
+      <File FileName="WhoLivesInThisHouseTest/JsonItemListFactoryTest.cs" Line="37" Column="61" />
+      <File FileName="WhoLivesInThisHouseTest/ItemFactoryTest.cs" Line="41" Column="1" />
+      <File FileName="WhoLivesInThisHouseTest/ItemTest.cs" Line="36" Column="10" />
+      <File FileName="WhoLivesInThisHouseTest/packages.config" Line="1" Column="1" />
+      <File FileName="WhoLivesInThisHouseTest/TagFactoryTest.cs" Line="54" Column="10" />
+      <File FileName="WhoLivesInThisHouse/JsonItemListFactory.cs" Line="30" Column="1" />
+      <File FileName="WhoLivesInThisHouse/JsonItem.cs" Line="12" Column="9" />
+      <File FileName="WhoLivesInThisHouse/ItemFactory.cs" Line="17" Column="45" />
+      <File FileName="WhoLivesInThisHouse/Item.cs" Line="27" Column="10" />
+      <File FileName="WhoLivesInThisHouseTest/CharacterTest.cs" Line="11" Column="13" />
+      <File FileName="WhoLivesInThisHouse/Character.cs" Line="34" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
           <Node name="WhoLivesInThisHouse" expanded="True">
             <Node name="WhoLivesInThisHouseTest" expanded="True">
               <Node name="WhoLivesInThisHouseTest" expanded="True">
-                <Node name="ItemFactoryTest" expanded="True">
-                  <Node name="it_should_create_an_item_with_tags" selected="True" />
-                </Node>
+                <Node name="ItemFactoryTest" expanded="True" />
                 <Node name="ItemTest" expanded="True" />
                 <Node name="JsonItemListFactoryTest" expanded="True" />
-                <Node name="TagFactoryTest" expanded="True" />
+                <Node name="TagFactoryTest" expanded="True">
+                  <Node name="it_should_be_able_to_fetch_random_excluding_some" selected="True" />
+                </Node>
                 <Node name="TagTest" expanded="True" />
               </Node>
             </Node>

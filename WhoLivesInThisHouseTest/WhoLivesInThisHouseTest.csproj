@@ -36,6 +36,7 @@
     <Compile Include="TagFactoryTest.cs" />
     <Compile Include="ItemFactoryTest.cs" />
     <Compile Include="JsonItemListFactoryTest.cs" />
+    <Compile Include="CharacterTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
