@@ -16,7 +16,8 @@ namespace WhoLivesInThisHouseTest
             Character character = new Character(
                 "Bob",
                 likeTags,
-                dislikeTags
+                dislikeTags,
+                "0000"
             );
             Assert.AreEqual("Bob", character.Name);
             Assert.AreEqual(2, character.LikeTags.Count);
@@ -37,7 +38,8 @@ namespace WhoLivesInThisHouseTest
             Character character1 = new Character(
                 "Bob",
                 likeTags,
-                dislikeTags
+                dislikeTags,
+                "0000"
             );
 
             Console.WriteLine("Character 1:" + character1);
@@ -45,7 +47,8 @@ namespace WhoLivesInThisHouseTest
             Character character2 = new Character(
                 "Bob",
                 likeTags,
-                dislikeTags
+                dislikeTags,
+                "0000"
             );
 
             Console.WriteLine("Character 2:" + character2);
@@ -56,7 +59,8 @@ namespace WhoLivesInThisHouseTest
             Character character3 = new Character(
                 "Bob",
                 moreTags,
-                dislikeTags
+                dislikeTags,
+                "0000"
             );
 
             Console.WriteLine("Character 3:" + character3);
@@ -66,7 +70,8 @@ namespace WhoLivesInThisHouseTest
             Character character4 = new Character(
                 "Bob",
                 likeTags,
-                moreTags
+                moreTags,
+                "0000"
             );
 
             Console.WriteLine("Character 4:" + character4);

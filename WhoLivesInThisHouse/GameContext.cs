@@ -36,7 +36,8 @@ namespace WhoLivesInThisHouse
             itemFactory = new ItemFactory(tagFactory);
             jsonItemListFactory = new JsonItemListFactory(itemFactory);
             characterNameGenerator = new CharacterNameGenerator(randomNumberGenerator);
-            characterFactory = new CharacterFactory(randomNumberGenerator, itemFactory, tagFactory, characterNameGenerator);
+            CharacterSafeCodeGenerator characterSafeCodeGenerator = new CharacterSafeCodeGenerator(randomNumberGenerator);
+            characterFactory = new CharacterFactory(randomNumberGenerator, itemFactory, tagFactory, characterNameGenerator, characterSafeCodeGenerator);
             roomFactory = new RoomFactory(characterFactory, itemFactory, randomNumberGenerator);
             gameServer = new GameServer();
         }

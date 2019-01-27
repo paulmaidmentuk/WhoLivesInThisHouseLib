@@ -32,12 +32,12 @@ namespace WhoLivesInThisHouseTest
             JsonItemListFactory jsonItemListFactory = new JsonItemListFactory(itemFactory);
             List<Item> itemList = jsonItemListFactory.GetItems(json);
             Assert.AreEqual(2, itemList.Count);
-            Assert.AreEqual("Test1", itemList[0].GetName());
-            Assert.AreEqual("tag1", itemList[0].GetTags()[0].Name);
-            Assert.AreEqual("tag2", itemList[0].GetTags()[1].Name);
-            Assert.AreEqual("Test2", itemList[1].GetName());
-            Assert.AreEqual("tag3", itemList[1].GetTags()[0].Name);
-            Assert.AreEqual("tag4", itemList[1].GetTags()[1].Name);
+            Assert.AreEqual("Test1", itemList[0].Name);
+            Assert.AreEqual("tag1", itemList[0].Tags[0].Name);
+            Assert.AreEqual("tag2", itemList[0].Tags[1].Name);
+            Assert.AreEqual("Test2", itemList[1].Name);
+            Assert.AreEqual("tag3", itemList[1].Tags[0].Name);
+            Assert.AreEqual("tag4", itemList[1].Tags[1].Name);
         }
     }
 }

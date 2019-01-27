@@ -7,6 +7,7 @@ namespace WhoLivesInThisHouse
     {
         private String name;
         private List<String> tags;
+        private String uiBinding;
 
         public String Name
         {
@@ -17,6 +18,18 @@ namespace WhoLivesInThisHouse
             set
             {
                 this.name = value;
+            }
+        }
+
+        public String UiBinding
+        {
+            get
+            {
+                return uiBinding != null ? uiBinding : ""; 
+            }
+            set 
+            {
+                this.uiBinding = value;
             }
         }
 
@@ -31,6 +44,8 @@ namespace WhoLivesInThisHouse
                 this.tags = value;
             }
         }
+
+        
 
     }
 }

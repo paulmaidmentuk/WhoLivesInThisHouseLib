@@ -7,16 +7,29 @@ namespace WhoLivesInThisHouse
     {
         private String name;
         private List<Tag> tags;
+        private String uiBinding = "";
 
-        public Item(String name)
+        public Item(String name, String uiBinding)
         {
             this.name = name;
             this.tags = new List<Tag>();
+            this.uiBinding = uiBinding;
         }
 
-        public String GetName()
+        public String Name
         {
-            return this.name;
+            get
+            {
+                return this.name;
+            }
+        }
+
+        public String UiBinding
+        {
+            get
+            {
+                return uiBinding;
+            }
         }
 
         public void AddTag(Tag tag)
@@ -52,9 +65,13 @@ namespace WhoLivesInThisHouse
             return false;
         }
 
-        public List<Tag> GetTags()
+        public List<Tag> Tags
         {
-            return this.tags;
+            get
+            {
+                return this.tags;
+            }
+           
         }
 
         public override bool Equals(object obj)
@@ -64,17 +81,17 @@ namespace WhoLivesInThisHouse
                 return false;
             }
             Item other = (Item) obj;
-            return GetName().Equals(other.GetName());
+            return Name.Equals(other.Name);
         }
 
         public override int GetHashCode()
         {
-            return GetName().GetHashCode();
+            return Name.GetHashCode();
         }
 
         public override string ToString()
         {
-            String result = "[Item] Name:" + GetName();
+            String result = "[Item] Name:" + Name;
             foreach(Tag tag in tags)
             {
                 result += "\n" + tag;

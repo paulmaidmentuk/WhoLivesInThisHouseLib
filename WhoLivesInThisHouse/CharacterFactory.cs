@@ -8,6 +8,7 @@ namespace WhoLivesInThisHouse
         private List<Character> characters;
         private RandomNumberGenerator randomNumberGenerator;
         private CharacterNameGenerator characterNameGenerator;
+        private CharacterSafeCodeGenerator characterSafeCodeGenerator;
         private TagFactory tagFactory;
         ItemFactory itemFactory;
 
@@ -15,13 +16,15 @@ namespace WhoLivesInThisHouse
             RandomNumberGenerator randomNumberGenerator,
             ItemFactory itemFactory,
             TagFactory tagFactory,
-            CharacterNameGenerator characterNameGenerator
+            CharacterNameGenerator characterNameGenerator,
+            CharacterSafeCodeGenerator characterSafeCodeGenerator
         ) {
             characters = new List<Character>();
             this.randomNumberGenerator = randomNumberGenerator;
             this.characterNameGenerator = characterNameGenerator;
             this.itemFactory = itemFactory;
             this.tagFactory = tagFactory;
+            this.characterSafeCodeGenerator = characterSafeCodeGenerator;
         }
 
         public List<Character> GenerateCharactersForGame(int maxCharacters)
@@ -36,7 +39,13 @@ namespace WhoLivesInThisHouse
                     characterName = characterNameGenerator.Generate();
                 } while (!CharacterNameIsUnique(characterName));
 
-                List<Tag> likes = tagFactory.GetRandomTags(5, new List<Tag> { }, itemFactory, false);
+                String characterSafeCode = "";
+                do
+                {
+                    characterSafeCode = characterSafeCodeGenerator.GenerateCode();
+                } while (!SafeCodeIsUnique(characterSafeCode));
+
+                List <Tag> likes = tagFactory.GetRandomTags(5, new List<Tag> { }, itemFactory, false);
 
                 List<Tag> dislikes;
                 dislikes = tagFactory.GetRandomTags(5, likes, itemFactory, true);
@@ -46,7 +55,8 @@ namespace WhoLivesInThisHouse
                 Character character = new Character(
                     characterName,
                     likes,
-                    dislikes
+                    dislikes,
+                    characterSafeCode
                 );
 
                 if (LikesAreUnique(likes) && DislikesAreUnique(dislikes))
@@ -87,6 +97,18 @@ namespace WhoLivesInThisHouse
             foreach (Character character in characters)
             {
                 if (character.Name.Equals(characterName))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private bool SafeCodeIsUnique(String safeCode)
+        {
+            foreach (Character character in characters)
+            {
+                if (character.SafeCode.Equals(safeCode))
                 {
                     return false;
                 }

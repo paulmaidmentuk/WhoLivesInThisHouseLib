@@ -52,6 +52,7 @@
     <Compile Include="RoomFactoryTest.cs" />
     <Compile Include="CharacterListSerializerTest.cs" />
     <Compile Include="CharacterListDeserializerTest.cs" />
+    <Compile Include="CharacterSafeCodeGeneratorTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

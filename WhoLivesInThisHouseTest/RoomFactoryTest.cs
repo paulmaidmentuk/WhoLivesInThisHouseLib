@@ -20,17 +20,19 @@ namespace WhoLivesInThisHouseTest
                 ItemFactory itemFactory = new ItemFactory(tagFactory);
 
                 CharacterNameGenerator characterNameGenerator = new CharacterNameGenerator(randomNumberGenerator);
+                CharacterSafeCodeGenerator characterSafeCodeGenerator = new CharacterSafeCodeGenerator(randomNumberGenerator);
 
                 for (int i = 1; i < 51; i++)
                 {
-                    itemFactory.CreateItem("item" + i, new List<String> { "item" + i + "tag1", "common"});
+                    itemFactory.CreateItem("item" + i, "", new List<String> { "item" + i + "tag1", "common"});
                 }
 
                 CharacterFactory characterFactory = new CharacterFactory(
                     randomNumberGenerator,
                     itemFactory,
                     tagFactory,
-                    characterNameGenerator
+                    characterNameGenerator,
+                    characterSafeCodeGenerator
                 );
 
                 List<Character> characters = characterFactory.GenerateCharactersForGame(5);
@@ -49,7 +51,7 @@ namespace WhoLivesInThisHouseTest
                     foreach (Item item in room.Items)
                     {
                         Console.WriteLine(tag.Name);
-                        Assert.False(item.GetTags().Contains(tag));
+                        Assert.False(item.Tags.Contains(tag));
                     }
                 }
 

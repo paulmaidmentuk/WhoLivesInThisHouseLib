@@ -11,6 +11,20 @@ namespace WhoLivesInThisHouse
         private String name;
         private List<Tag> likeTags;
         private List<Tag> dislikeTags;
+        private String safeCode;
+
+        public String SafeCode
+        {
+            get
+            {
+                return this.safeCode;
+            }
+            set
+            {
+                this.safeCode = value;
+            }
+
+        }
 
         public String Name
         {
@@ -20,11 +34,12 @@ namespace WhoLivesInThisHouse
             }
         }
 
-        public Character(String name, List<Tag> likeTags, List<Tag> dislikeTags)
+        public Character(String name, List<Tag> likeTags, List<Tag> dislikeTags, String safeCode)
         {
             this.name = name;
             this.likeTags = likeTags;
             this.dislikeTags = dislikeTags;
+            this.safeCode = safeCode;
         }
 
         public List<Tag> LikeTags
@@ -72,14 +87,20 @@ namespace WhoLivesInThisHouse
                 return false;
             }
 
+            if(!SafeCode.Equals(other.SafeCode))
+            {
+                return false;
+            }
+
             return true;
         }
 
         public override int GetHashCode()
         {
-            return this.Name.GetHashCode() 
-                + 31 * this.LikeTags.GetHashCode() 
-                + 31 * this.DislikeTags.GetHashCode();
+            return this.Name.GetHashCode()
+                + 31 * this.LikeTags.GetHashCode()
+                + 31 * this.DislikeTags.GetHashCode()
+                + 31 * this.SafeCode.GetHashCode();
         }
 
         public override string ToString()
@@ -97,6 +118,8 @@ namespace WhoLivesInThisHouse
             {
                 result += tag;
             }
+
+            result += "\nSafecode:" + SafeCode;
 
             return result;
         }

@@ -20,7 +20,7 @@ namespace WhoLivesInThisHouse
             List<JsonItem> jsonItems = JsonConvert.DeserializeObject<List<JsonItem>>(json);
             foreach(JsonItem jsonItem in jsonItems)
             {
-                result.Add(itemFactory.CreateItem(jsonItem.Name, jsonItem.Tags));
+                result.Add(itemFactory.CreateItem(jsonItem.Name, jsonItem.UiBinding, jsonItem.Tags));
 
             }
             return result;

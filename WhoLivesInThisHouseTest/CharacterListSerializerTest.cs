@@ -13,10 +13,10 @@ namespace WhoLivesInThisHouseTest
         {
             CharacterListSerializer serializer = new CharacterListSerializer();
             List<Character> characters = new List<Character>();
-            characters.Add(new Character("Bob", new List<Tag> { new Tag("abc"), new Tag("def") }, new List<Tag> { new Tag("xyz") }));
-            characters.Add(new Character("Steve", new List<Tag> { new Tag("cde"), new Tag("fga") }, new List<Tag> { new Tag("opq") }));
+            characters.Add(new Character("Bob", new List<Tag> { new Tag("abc"), new Tag("def") }, new List<Tag> { new Tag("xyz") }, "0000"));
+            characters.Add(new Character("Steve", new List<Tag> { new Tag("cde"), new Tag("fga") }, new List<Tag> { new Tag("opq") }, "0000"));
             String serializedCharacters = serializer.Serialize(characters);
-            String expected = @"[{""Name"":""Bob"",""LikeTags"":[{""Name"":""abc""},{""Name"":""def""}],""DislikeTags"":[{""Name"":""xyz""}]},{""Name"":""Steve"",""LikeTags"":[{""Name"":""cde""},{""Name"":""fga""}],""DislikeTags"":[{""Name"":""opq""}]}]";
+            String expected = @"[{""SafeCode"":""0000"",""Name"":""Bob"",""LikeTags"":[{""Name"":""abc""},{""Name"":""def""}],""DislikeTags"":[{""Name"":""xyz""}]},{""SafeCode"":""0000"",""Name"":""Steve"",""LikeTags"":[{""Name"":""cde""},{""Name"":""fga""}],""DislikeTags"":[{""Name"":""opq""}]}]";
             Assert.AreEqual(expected, serializedCharacters);
         }
     }

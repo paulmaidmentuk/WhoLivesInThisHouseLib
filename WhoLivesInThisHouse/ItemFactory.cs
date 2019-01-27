@@ -14,9 +14,9 @@ namespace WhoLivesInThisHouse
             this.items = new List<Item>();
         }
 
-        public Item CreateItem(String name, List<String> tags)
+        public Item CreateItem(String name, String uiBinding, List<String> tags)
         {
-            Item item = new Item(name);
+            Item item = new Item(name, uiBinding);
             foreach (String tagName in tags)
             {
                 Tag tag = tagFactory.GetTagByName(tagName);

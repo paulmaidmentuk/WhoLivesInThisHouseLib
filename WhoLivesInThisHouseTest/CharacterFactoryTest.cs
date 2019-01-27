@@ -16,13 +16,14 @@ namespace WhoLivesInThisHouseTest
             TagFactory tagFactory = new TagFactory(randomNumberGenerator);
             ItemFactory itemFactory = new ItemFactory(tagFactory);
             CharacterNameGenerator characterNameGenerator = new CharacterNameGenerator(randomNumberGenerator);
+            CharacterSafeCodeGenerator characterSafeCodeGenerator = new CharacterSafeCodeGenerator(randomNumberGenerator);
 
             for (int i = 1; i < 51; i++)
             {
-                itemFactory.CreateItem("item" + i, new List<String> { "item"+i+"tag1", "commonTag1", "commonTag2"});
+                itemFactory.CreateItem("item" + i, "", new List<String> { "item"+i+"tag1", "commonTag1", "commonTag2"});
             }
 
-            CharacterFactory characterFactory = new CharacterFactory(randomNumberGenerator, itemFactory, tagFactory, characterNameGenerator);
+            CharacterFactory characterFactory = new CharacterFactory(randomNumberGenerator, itemFactory, tagFactory, characterNameGenerator, characterSafeCodeGenerator);
             List<Character> characters = characterFactory.GenerateCharactersForGame(5);
             Assert.AreEqual(5, characters.Count);
             Assert.AreEqual(5, characters[0].LikeTags.Count);
