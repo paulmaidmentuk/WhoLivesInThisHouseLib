@@ -73,6 +73,7 @@
     <Compile Include="RoomSerializer.cs" />
     <Compile Include="RoomController.cs" />
     <Compile Include="GameController.cs" />
+    <Compile Include="CharacterListApiCaller.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
