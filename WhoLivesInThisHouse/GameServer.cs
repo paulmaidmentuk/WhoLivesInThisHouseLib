@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net;
+using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 using Unosquare.Labs.EmbedIO;
@@ -7,16 +9,16 @@ using Unosquare.Labs.EmbedIO.Modules;
 
 namespace WhoLivesInThisHouse
 {
-
     public class GameServer
     {
         private WebServer server;
         private Task webServerTask;
         private CancellationTokenSource cancellationTokenSource;
+        private String url;
 
         public GameServer()
         {
-            String url = "http://localhost:9595/";
+            url = "http://" + GetLocalIP() + ":9595/";
             server = new WebServer(url, RoutingStrategy.Regex);
             server.RegisterModule(new WebApiModule());
             server.Module<WebApiModule>().RegisterController<CharacterListController>();
@@ -39,6 +41,28 @@ namespace WhoLivesInThisHouse
             webServerTask.Dispose();
             server.Dispose();
             return true;
+        }
+
+        public String Url
+        {
+            get
+            {
+                return this.url;
+            }
+
+        }
+
+        public string GetLocalIP()
+        {
+            IPAddress[] localIPs = Dns.GetHostAddresses(Dns.GetHostName());
+            foreach (IPAddress addr in localIPs)
+            {
+                if (addr.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return addr.ToString();
+                }
+            }
+            return "";
         }
     }
 }

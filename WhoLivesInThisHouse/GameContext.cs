@@ -61,6 +61,14 @@ namespace WhoLivesInThisHouse
             roomOwner = characters[characterIndex];
         }
 
+        public String ServerUrl
+        {
+            get
+            {
+                return gameServer.Url;
+            }
+        }
+
         public Room CurrentRoom
         { 
             get
