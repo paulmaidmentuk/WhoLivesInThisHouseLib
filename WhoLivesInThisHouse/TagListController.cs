@@ -6,22 +6,22 @@ using Unosquare.Labs.EmbedIO.Modules;
 
 namespace WhoLivesInThisHouse
 {
-    public class ItemListController : WebApiController
+    public class TagListController : WebApiController
     {
         private GameContext gameContext;
 
-        public ItemListController(IHttpContext context) : base(context)
+        public TagListController(IHttpContext context) : base(context)
         {
             gameContext = GameContext.Instance;
         }
 
-        [WebApiHandler(HttpVerbs.Get, "/api/items")]
-        public bool GetItems()
+        [WebApiHandler(HttpVerbs.Get, "/api/tags")]
+        public bool GetTags()
         {
             try
             {
-                ItemListSerializer itemListSerializer = new ItemListSerializer();
-                return this.JsonResponse(itemListSerializer.Serialize(gameContext.AllItems));
+                TagListSerializer tagListSerializer = new TagListSerializer();
+                return this.JsonResponse(tagListSerializer.Serialize(gameContext.AllTags));
             }
             catch (Exception ex)
             {

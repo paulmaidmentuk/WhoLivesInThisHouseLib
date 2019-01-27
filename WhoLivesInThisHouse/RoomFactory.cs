@@ -25,7 +25,7 @@ namespace WhoLivesInThisHouse
         {
             PopulateRoomWithLikedItemsFromCharacter(character);
             PopulateRoomWithFillerItems(character);
-            return new Room(items);
+            return new Room(items, character);
         }
 
         private void PopulateRoomWithLikedItemsFromCharacter(Character character)

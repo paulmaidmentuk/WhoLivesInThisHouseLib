@@ -6,10 +6,12 @@ namespace WhoLivesInThisHouse
     public class Room
     {
         private List<Item> items;
+        private Character owner;
 
-        public Room(List<Item> items)
+        public Room(List<Item> items, Character owner)
         {
             this.items = items;
+            this.owner = owner;
         }
 
         public List<Item> Items
@@ -17,6 +19,14 @@ namespace WhoLivesInThisHouse
             get
             {
                 return this.items;
+            }
+        }
+
+        public Character Owner
+        {
+            get
+            {
+                return this.owner;
             }
         }
 

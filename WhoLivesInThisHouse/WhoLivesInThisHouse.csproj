@@ -68,6 +68,10 @@
     <Compile Include="CharacterSafeCodeGenerator.cs" />
     <Compile Include="ItemListController.cs" />
     <Compile Include="ItemListSerializer.cs" />
+    <Compile Include="TagListController.cs" />
+    <Compile Include="TagListSerializer.cs" />
+    <Compile Include="RoomSerializer.cs" />
+    <Compile Include="RoomController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

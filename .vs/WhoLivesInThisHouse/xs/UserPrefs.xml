@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{23C4FFCC-3149-4E40-BFE8-0B529888F543}|Unit Tests">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhoLivesInThisHouse/ItemListController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhoLivesInThisHouse/RoomFactory.cs">
     <Files>
       <File FileName="WhoLivesInThisHouse/CharacterSafeCodeGenerator.cs" Line="20" Column="1" />
       <File FileName="WhoLivesInThisHouseTest/CharacterSafeCodeGeneratorTest.cs" Line="1" Column="1" />
@@ -12,21 +12,19 @@
       <File FileName="WhoLivesInThisHouseTest/CharacterTest.cs" Line="70" Column="50" />
       <File FileName="WhoLivesInThisHouseTest/CharacterListDeserializerTest.cs" Line="23" Column="58" />
       <File FileName="WhoLivesInThisHouseTest/JsonItemListFactoryTest.cs" Line="29" Column="16" />
-      <File FileName="WhoLivesInThisHouse/GameServer.cs" Line="1" Column="1" />
-      <File FileName="WhoLivesInThisHouse/CharacterListController.cs" Line="1" Column="1" />
-      <File FileName="WhoLivesInThisHouse/ItemListController.cs" Line="23" Column="35" />
+      <File FileName="WhoLivesInThisHouse/GameServer.cs" Line="33" Column="33" />
+      <File FileName="WhoLivesInThisHouse/CharacterListController.cs" Line="36" Column="1" />
+      <File FileName="WhoLivesInThisHouse/ItemListController.cs" Line="36" Column="1" />
+      <File FileName="WhoLivesInThisHouse/RoomController.cs" Line="36" Column="1" />
+      <File FileName="WhoLivesInThisHouse/ItemListSerializer.cs" Line="15" Column="1" />
+      <File FileName="WhoLivesInThisHouse/TagListController.cs" Line="36" Column="1" />
+      <File FileName="WhoLivesInThisHouse/Room.cs" Line="14" Column="32" />
+      <File FileName="WhoLivesInThisHouse/RoomFactory.cs" Line="28" Column="45" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="WhoLivesInThisHouse" expanded="True">
-            <Node name="WhoLivesInThisHouseTest" expanded="True">
-              <Node name="WhoLivesInThisHouseTest" expanded="True" selected="True">
-                <Node name="CharacterListDeserializerTest" expanded="True" />
-                <Node name="CharacterListSerializerTest" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="WhoLivesInThisHouse" expanded="True" />
         </State>
       </Pad>
     </Pads>

@@ -6,22 +6,22 @@ using Unosquare.Labs.EmbedIO.Modules;
 
 namespace WhoLivesInThisHouse
 {
-    public class ItemListController : WebApiController
+    public class RoomController : WebApiController
     {
         private GameContext gameContext;
 
-        public ItemListController(IHttpContext context) : base(context)
+        public RoomController(IHttpContext context) : base(context)
         {
             gameContext = GameContext.Instance;
         }
 
-        [WebApiHandler(HttpVerbs.Get, "/api/items")]
-        public bool GetItems()
+        [WebApiHandler(HttpVerbs.Get, "/api/room")]
+        public bool GetRoom()
         {
             try
             {
-                ItemListSerializer itemListSerializer = new ItemListSerializer();
-                return this.JsonResponse(itemListSerializer.Serialize(gameContext.AllItems));
+                RoomSerializer roomSerializer = new RoomSerializer();
+                return this.JsonResponse(roomSerializer.Serialize(gameContext.CurrentRoom));
             }
             catch (Exception ex)
             {
