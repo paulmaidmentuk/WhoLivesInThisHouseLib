@@ -34,6 +34,14 @@ namespace WhoLivesInThisHouse
             }
         }
 
+        public String ImagePrefix
+        {
+            get
+            {
+                return this.name.ToLower().Replace(" ", "_");
+            }
+        }
+
         public Character(String name, List<Tag> likeTags, List<Tag> dislikeTags, String safeCode)
         {
             this.name = name;

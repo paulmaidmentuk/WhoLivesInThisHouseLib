@@ -1,16 +1,23 @@
 ﻿<Properties StartupConfiguration="{23C4FFCC-3149-4E40-BFE8-0B529888F543}|Unit Tests">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhoLivesInThisHouse/GameController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhoLivesInThisHouseTest/CharacterListSerializerTest.cs">
     <Files>
-      <File FileName="WhoLivesInThisHouse/RoomFactory.cs" Line="32" Column="10" />
-      <File FileName="WhoLivesInThisHouse/RoomController.cs" Line="1" Column="1" />
-      <File FileName="WhoLivesInThisHouse/GameServer.cs" Line="41" Column="10" />
-      <File FileName="WhoLivesInThisHouse/GameController.cs" Line="13" Column="17" />
+      <File FileName="WhoLivesInThisHouse/GameServer.cs" Line="11" Column="28" />
+      <File FileName="WhoLivesInThisHouse/GameController.cs" Line="36" Column="1" />
+      <File FileName="WhoLivesInThisHouse/GameContext.cs" Line="53" Column="37" />
+      <File FileName="WhoLivesInThisHouse/Character.cs" Line="44" Column="9" />
+      <File FileName="WhoLivesInThisHouseTest/CharacterListSerializerTest.cs" Line="16" Column="48" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
           <Node name="WhoLivesInThisHouse" expanded="True">
-            <Node name="WhoLivesInThisHouseTest" expanded="True" />
+            <Node name="WhoLivesInThisHouseTest" expanded="True">
+              <Node name="WhoLivesInThisHouseTest" expanded="True">
+                <Node name="CharacterListSerializerTest" expanded="True">
+                  <Node name="it_should_serialize_a_list_of_characters" selected="True" />
+                </Node>
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
