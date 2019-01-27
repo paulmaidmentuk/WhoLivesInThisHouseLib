@@ -13,6 +13,7 @@ namespace WhoLivesInThisHouseTest
         {
             String json = @"[{
               'name': 'Test1',
+              'uiBinding':'someUiCode1',
               'tags': [
                 'tag1',
                 'tag2'
@@ -20,6 +21,7 @@ namespace WhoLivesInThisHouseTest
             },
             {
               'name': 'Test2',
+              'uiBinding':'someUiCode2',
               'tags': [
                 'tag3',
                 'tag4'
@@ -33,9 +35,11 @@ namespace WhoLivesInThisHouseTest
             List<Item> itemList = jsonItemListFactory.GetItems(json);
             Assert.AreEqual(2, itemList.Count);
             Assert.AreEqual("Test1", itemList[0].Name);
+            Assert.AreEqual("someUiCode1", itemList[0].UiBinding);
             Assert.AreEqual("tag1", itemList[0].Tags[0].Name);
             Assert.AreEqual("tag2", itemList[0].Tags[1].Name);
             Assert.AreEqual("Test2", itemList[1].Name);
+            Assert.AreEqual("someUiCode2", itemList[1].UiBinding);
             Assert.AreEqual("tag3", itemList[1].Tags[0].Name);
             Assert.AreEqual("tag4", itemList[1].Tags[1].Name);
         }

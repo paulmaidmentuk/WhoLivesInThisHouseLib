@@ -20,6 +20,7 @@ namespace WhoLivesInThisHouse
             server = new WebServer(url, RoutingStrategy.Regex);
             server.RegisterModule(new WebApiModule());
             server.Module<WebApiModule>().RegisterController<CharacterListController>();
+            server.Module<WebApiModule>().RegisterController<ItemListController>();
         }
 
         public void StartServer()

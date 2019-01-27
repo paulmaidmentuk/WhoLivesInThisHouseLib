@@ -66,6 +66,8 @@
     <Compile Include="CharacterListController.cs" />
     <Compile Include="GameContext.cs" />
     <Compile Include="CharacterSafeCodeGenerator.cs" />
+    <Compile Include="ItemListController.cs" />
+    <Compile Include="ItemListSerializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

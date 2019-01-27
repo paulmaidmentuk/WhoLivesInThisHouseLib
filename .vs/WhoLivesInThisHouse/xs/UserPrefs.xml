@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{23C4FFCC-3149-4E40-BFE8-0B529888F543}|Unit Tests">
-  <MonoDevelop.Ide.Workbench ActiveDocument="WhoLivesInThisHouseTest/CharacterListDeserializerTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WhoLivesInThisHouse/ItemListController.cs">
     <Files>
       <File FileName="WhoLivesInThisHouse/CharacterSafeCodeGenerator.cs" Line="20" Column="1" />
-      <File FileName="WhoLivesInThisHouseTest/CharacterSafeCodeGeneratorTest.cs" Line="33" Column="1" />
+      <File FileName="WhoLivesInThisHouseTest/CharacterSafeCodeGeneratorTest.cs" Line="1" Column="1" />
       <File FileName="WhoLivesInThisHouseTest/CharacterListSerializerTest.cs" Line="19" Column="188" />
       <File FileName="WhoLivesInThisHouse/CharacterFactory.cs" Line="59" Column="38" />
       <File FileName="WhoLivesInThisHouse/GameContext.cs" Line="55" Column="9" />
@@ -10,17 +10,20 @@
       <File FileName="WhoLivesInThisHouseTest/CharacterFactoryTest.cs" Line="27" Column="1" />
       <File FileName="WhoLivesInThisHouse/Character.cs" Line="42" Column="38" />
       <File FileName="WhoLivesInThisHouseTest/CharacterTest.cs" Line="70" Column="50" />
-      <File FileName="WhoLivesInThisHouseTest/CharacterListDeserializerTest.cs" Line="14" Column="53" />
+      <File FileName="WhoLivesInThisHouseTest/CharacterListDeserializerTest.cs" Line="23" Column="58" />
+      <File FileName="WhoLivesInThisHouseTest/JsonItemListFactoryTest.cs" Line="29" Column="16" />
+      <File FileName="WhoLivesInThisHouse/GameServer.cs" Line="1" Column="1" />
+      <File FileName="WhoLivesInThisHouse/CharacterListController.cs" Line="1" Column="1" />
+      <File FileName="WhoLivesInThisHouse/ItemListController.cs" Line="23" Column="35" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
           <Node name="WhoLivesInThisHouse" expanded="True">
             <Node name="WhoLivesInThisHouseTest" expanded="True">
-              <Node name="WhoLivesInThisHouseTest" expanded="True">
-                <Node name="CharacterListSerializerTest" expanded="True">
-                  <Node name="it_should_serialize_a_list_of_characters" selected="True" />
-                </Node>
+              <Node name="WhoLivesInThisHouseTest" expanded="True" selected="True">
+                <Node name="CharacterListDeserializerTest" expanded="True" />
+                <Node name="CharacterListSerializerTest" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -33,7 +36,6 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/GameContext.cs" relfile="WhoLivesInThisHouse/GameContext.cs" line="40" column="1" />
       <Breakpoint file="/home/paulmaidment/Projects/WhoLivesInThisHouse/WhoLivesInThisHouse/CharacterFactory.cs" relfile="WhoLivesInThisHouse/CharacterFactory.cs" line="32" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
