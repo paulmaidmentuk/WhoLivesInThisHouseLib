@@ -14,6 +14,8 @@ namespace WhoLivesInThisHouseTest
             String json = @"[{
               'name': 'Test1',
               'uiBinding':'someUiCode1',
+              'imageFilenamePrefix':'test1_image',
+              'soundFilenamePrefix':'test1_sound',
               'tags': [
                 'tag1',
                 'tag2'
@@ -35,10 +37,14 @@ namespace WhoLivesInThisHouseTest
             List<Item> itemList = jsonItemListFactory.GetItems(json);
             Assert.AreEqual(2, itemList.Count);
             Assert.AreEqual("Test1", itemList[0].Name);
+            Assert.AreEqual("test1_image", itemList[0].ImageFileNamePrefix);
+            Assert.AreEqual("test1_sound", itemList[0].SoundFileNamePrefix);
             Assert.AreEqual("someUiCode1", itemList[0].UiBinding);
             Assert.AreEqual("tag1", itemList[0].Tags[0].Name);
             Assert.AreEqual("tag2", itemList[0].Tags[1].Name);
             Assert.AreEqual("Test2", itemList[1].Name);
+            Assert.AreEqual("test2", itemList[1].ImageFileNamePrefix);
+            Assert.AreEqual("test2", itemList[1].SoundFileNamePrefix);
             Assert.AreEqual("someUiCode2", itemList[1].UiBinding);
             Assert.AreEqual("tag3", itemList[1].Tags[0].Name);
             Assert.AreEqual("tag4", itemList[1].Tags[1].Name);

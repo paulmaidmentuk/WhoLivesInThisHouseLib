@@ -20,7 +20,7 @@ namespace WhoLivesInThisHouseTest
 
             for (int i = 1; i < 51; i++)
             {
-                itemFactory.CreateItem("item" + i, "", new List<String> { "item"+i+"tag1", "commonTag1", "commonTag2"});
+                itemFactory.CreateItem("item" + i, "", "", "", new List<String> { "item"+i+"tag1", "commonTag1", "commonTag2"});
             }
 
             CharacterFactory characterFactory = new CharacterFactory(randomNumberGenerator, itemFactory, tagFactory, characterNameGenerator, characterSafeCodeGenerator);

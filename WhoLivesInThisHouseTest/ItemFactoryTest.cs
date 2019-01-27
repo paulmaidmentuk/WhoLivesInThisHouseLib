@@ -14,7 +14,7 @@ namespace WhoLivesInThisHouseTest
             RandomNumberGenerator randomNumberGenerator = new SystemRandomNumberGenerator();
             TagFactory tagFactory = new TagFactory(randomNumberGenerator);
             ItemFactory itemFactory = new ItemFactory(tagFactory);
-            Item item = itemFactory.CreateItem("Test Item", "", new List<string>(new String [] { "tag1", "tag2", "tag1"}));
+            Item item = itemFactory.CreateItem("Test Item", "", "", "", new List<string>(new String [] { "tag1", "tag2", "tag1"}));
             Assert.AreEqual("Test Item", item.Name);
             Assert.AreEqual(2, item.Tags.Count);
             Assert.AreEqual(new Tag("tag1"), item.Tags[0]);
@@ -28,8 +28,8 @@ namespace WhoLivesInThisHouseTest
             RandomNumberGenerator randomNumberGenerator = new SystemRandomNumberGenerator();
             TagFactory tagFactory = new TagFactory(randomNumberGenerator);
             ItemFactory itemFactory = new ItemFactory(tagFactory);
-            itemFactory.CreateItem("Test Item", "", new List<string>(new String[] { "tag1", "tag2", "tag1" }));
-            itemFactory.CreateItem("Test Item 2", "", new List<string>(new String[] { "tag1", "tag4", "tag5" }));
+            itemFactory.CreateItem("Test Item", "", "", "", new List<string>(new String[] { "tag1", "tag2", "tag1" }));
+            itemFactory.CreateItem("Test Item 2", "", "", "", new List<string>(new String[] { "tag1", "tag4", "tag5" }));
             List<Item> tag1Items = itemFactory.FetchItemsByTagName("tag1");
             Assert.AreEqual(2, tag1Items.Count);
             Assert.AreEqual("Test Item", tag1Items[0].Name);

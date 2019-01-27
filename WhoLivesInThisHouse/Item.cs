@@ -6,14 +6,18 @@ namespace WhoLivesInThisHouse
     public class Item
     {
         private String name;
+        private String imageFilenamePrefix;
+        private String soundFilenamePrefix;
         private List<Tag> tags;
         private String uiBinding = "";
 
-        public Item(String name, String uiBinding)
+        public Item(String name, String uiBinding, String imageFilenamePrefix, String soundFilenamePrefix)
         {
             this.name = name;
             this.tags = new List<Tag>();
             this.uiBinding = uiBinding;
+            this.imageFilenamePrefix = imageFilenamePrefix;
+            this.soundFilenamePrefix = soundFilenamePrefix;
         }
 
         public String Name
@@ -21,6 +25,23 @@ namespace WhoLivesInThisHouse
             get
             {
                 return this.name;
+            }
+        }
+
+        public String ImageFileNamePrefix
+        {
+            get
+            {
+                return this.imageFilenamePrefix;
+            }
+        }
+
+        public String SoundFileNamePrefix
+        {
+            get
+            {
+                return this.soundFilenamePrefix;
+
             }
         }
 
