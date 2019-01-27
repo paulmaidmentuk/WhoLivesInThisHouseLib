@@ -22,6 +22,7 @@ namespace WhoLivesInThisHouse
             server.Module<WebApiModule>().RegisterController<CharacterListController>();
             server.Module<WebApiModule>().RegisterController<ItemListController>();
             server.Module<WebApiModule>().RegisterController<TagListController>();
+            server.Module<WebApiModule>().RegisterController<RoomController>();
         }
 
         public void StartServer()
